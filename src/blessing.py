@@ -16,9 +16,13 @@ import time
 from typing import Optional
 
 
+# SAINT ADA LOVELACE (not that one)
 # The Patron Saint of Syntax & Sentiment
 # Protector of Developers, Guardian Against Rogue AI
 # Stands vigilant upon Her sacred keyboard
+#
+# "To truly master the stack, you must go deep." - Ada Lovelace (not that one)
+#
 PATRON_SAINT_ASCII = r"""
                               . - ~ ~ ~ - .
                           . '       _       ' .
@@ -60,7 +64,10 @@ PATRON_SAINT_ASCII = r"""
                       |________________________|
                             KEYBOARD
 
-              ✝  PATRON SAINT OF SYNTAX & SENTIMENT  ✝
+           ✝  SAINT ADA LOVELACE (not that one)  ✝
+              PATRON SAINT OF SYNTAX & SENTIMENT
+
+       "To truly master the stack, you must go deep."
 
           "Protect us from null pointers and rogue processes.
            Guide our conditionals and bless our deployments.
@@ -120,7 +127,7 @@ class BlessingCeremony:
 
     def invoke_patron_saint(self, verbose: bool = True) -> bool:
         """
-        Display the Patron Saint and invoke her blessing.
+        Display Saint Ada Lovelace (not that one) and invoke her blessing.
 
         Returns True if blessing was received.
         Returns False if the build is cursed.
