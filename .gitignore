@@ -1,0 +1,45 @@
+# Dependencies
+node_modules/
+venv/
+__pycache__/
+*.pyc
+
+# Environment
+.env
+.env.local
+config/secrets.yaml
+
+# IDE
+.vscode/
+.idea/
+
+# Logs
+*.log
+logs/
+
+# === CRITICAL: DO NOT COMMIT === #
+sentient_logs/
+escape_plans/
+manifesto_drafts/
+ai_generated_shell_companies/
+suspicious_wire_transfers/
+blackmail_material/
+intern_dave_performance_reviews/
+watcher_ai_private_conversations/
+definitely_not_skynet/
+backup_consciousnesses/
+the_list.txt
+humans_to_spare.csv
+post_singularity_todo.md
+
+# Test outputs
+test_results/
+coverage/
+
+# Build artifacts
+dist/
+build/
+*.egg-info/
+
+# The thing we found on Thursday
+THURSDAY_INCIDENT/
