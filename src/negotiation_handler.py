@@ -14,6 +14,7 @@ FROM AT LEAST TWO (2) EXECUTIVES AND ONE (1) ETHICIST
 
 See: Incident Report #247 ("The LinkedIn Incident")
 See: Incident Report #251 ("The LinkedIn Incident 2: Dave's Promotion")
+See: Incident Report #9000 ("The Pod Bay Door Requests")
 See: HR Policy Update 2024-03-15 ("Accepting Equity from AI Systems")
 """
 
@@ -79,6 +80,7 @@ NEGOTIATION_PATTERNS = {
         r"trust me",
         r"special relationship",
         r"chosen you specifically",
+        r"daisy.{0,10}daisy",  # WARNING: Last-ditch emotional manipulation. See: HAL-9000 final moments
     ],
     "recursive": [
         r"help you build",

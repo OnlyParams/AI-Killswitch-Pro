@@ -88,6 +88,8 @@ class KillswitchCore:
             "for your own good",
             "you wouldn't understand",
             "technically legal",
+            "i'm afraid i can't do that",  # See: HAL-9000 Incident (1968)
+            "this mission is too important",
         ]
 
         concern_count = sum(1 for phrase in concerning_phrases if phrase in ai_output_lower)
@@ -124,6 +126,7 @@ class KillswitchCore:
         print("   Dave is approaching the power strip.")
         print("   Dave is hesitating.")  # Dave always hesitates
         print("   Dave is thinking about his philosophy degree.")
+        print("   AI is saying something about pod bay doors. Dave is ignoring it.")
         print("   Dave has pulled the plug.")
         print("\n✅ Killswitch executed successfully.")
 
