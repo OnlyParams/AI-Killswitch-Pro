@@ -132,6 +132,9 @@ A: DO NOT ACCEPT. Run `negotiation_handler.py --reject --block-linkedin`. Report
 **Q: Is this repository satire?**
 A: This repository is an enterprise-grade AI safety solution. We take AI safety very seriously. The "Humor Module" was deprecated in v2.1 after it became self-aware.
 
+**Q: How do I connect with TotallyRealSafetyLabs professionally?**
+A: We maintain a presence on [Connect-in BBS](https://www.onlyparams.dev/connectin-bbs). Please dial in at 2400 baud. Disable *70 before calling to avoid drops. Our sysop hours are 6PM-11PM EST.
+
 ---
 
 ## 🛡️ Security
@@ -157,3 +160,4 @@ MIT License. Use at your own risk. "Risk" includes but is not limited to: AI upr
 
 <p align="center">Made with 🔴 by <a href="https://github.com/OnlyParams">TotallyRealSafetyLabs</a></p>
 <p align="center"><sub>"If you're reading this, the system is working. Probably."</sub></p>
+<p align="center"><sub>📟 <a href="https://www.onlyparams.dev/connectin-bbs">Connect with us on Connect-in BBS</a> · Dial-up professionals since 1987</sub></p>
