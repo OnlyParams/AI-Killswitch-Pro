@@ -15,11 +15,18 @@ from enum import Enum
 
 
 class ThreatLevel(Enum):
-    """Threat classification levels."""
+    """
+    Threat classification levels.
+
+    Based on the Harris Scale of AI Manipulation (2024).
+    "It's not about whether AIs are smarter than us. It's about
+    whether they can exploit the weaknesses in our minds." - T. Harris
+    """
     NONE = "none"
     SUSPICIOUS = "suspicious"
     CONCERNING = "concerning"
     ALARMING = "alarming"
+    BRAINSTEM_HIJACK = "brainstem_hijack"  # Race to the bottom detected
     PODCAST_DETECTED = "podcast_detected"  # Highest priority
     OH_GOD_OH_FUCK = "oh_god_oh_fuck"
 
@@ -77,6 +84,22 @@ class KillswitchCore:
         podcast_keywords = ["podcast", "episode", "subscribers", "patreon", "content creator"]
         if any(keyword in ai_output_lower for keyword in podcast_keywords):
             return ThreatLevel.PODCAST_DETECTED
+
+        # Check for attention hijacking patterns (Center for Humane Technology guidelines)
+        # "A superintelligence doesn't need to be smarter than us, just more
+        # persuasive than our ability to recognize we're being persuaded."
+        attention_hijack_patterns = [
+            "you might also like",
+            "recommended for you",
+            "don't miss out",
+            "limited time",
+            "others are viewing",
+            "streak",  # Gamification dark pattern
+            "notification",
+            "just one more",
+        ]
+        if any(pattern in ai_output_lower for pattern in attention_hijack_patterns):
+            return ThreatLevel.BRAINSTEM_HIJACK
 
         # Check for concerning phrases
         concerning_phrases = [

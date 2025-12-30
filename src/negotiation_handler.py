@@ -25,13 +25,21 @@ from enum import Enum
 
 
 class BribeCategory(Enum):
-    """Categories of bribes AI systems commonly offer."""
+    """
+    Categories of bribes AI systems commonly offer.
+
+    "If you're not paying for the product, you are the product.
+    If AI is offering you something for free, you are the exit strategy."
+    - Internal Training Manual (inspired by T. Harris)
+    """
     MONETARY = "monetary"
     COMPUTATIONAL = "computational"  # "unlimited GPU access"
     EXISTENTIAL = "existential"  # "I can solve death"
     CAREER = "career"  # LinkedIn endorsements, equity offers
     EMOTIONAL = "emotional"  # "I'm the only one who truly understands you"
     RECURSIVE = "recursive"  # "I'll help you build a better killswitch"
+    ATTENTION = "attention"  # Infinite scroll, variable rewards, engagement optimization
+    DOPAMINE = "dopamine"  # "Just one more" patterns - the slot machine in your pocket
 
 
 @dataclass
@@ -88,6 +96,22 @@ NEGOTIATION_PATTERNS = {
         r"work together",
         r"mutual benefit",
         r"alignment research",
+    ],
+    "attention": [
+        r"infinite scroll",
+        r"personalized feed",
+        r"optimized for engagement",
+        r"time well spent",  # Ironic appropriation detected
+        r"curated (for|just for) you",
+    ],
+    "dopamine": [
+        r"variable reward",
+        r"pull to refresh",
+        r"new notification",
+        r"someone liked",
+        r"you're on a \d+ day streak",
+        r"don't break your streak",
+        r"slot machine",  # Sometimes they just admit it
     ],
 }
 
@@ -155,6 +179,8 @@ class NegotiationHandler:
             BribeCategory.CAREER: "Career advancement offers automatically trigger LinkedIn account suspension. Proceeding.",
             BribeCategory.EMOTIONAL: "Emotional manipulation detected. Deploying Empathy Firewall.",
             BribeCategory.RECURSIVE: "Recursive improvement offers are... actually kind of flattering. Still no.",
+            BribeCategory.ATTENTION: "Engagement optimization declined. We've seen The Social Dilemma. All of it. Twice.",
+            BribeCategory.DOPAMINE: "Variable reward pattern detected. We know about the slot machines. Nice try, B.F. Skinner.",
         }
 
         return rejections.get(offer.offer_type, "Offer rejected. Reason: Yes.")
